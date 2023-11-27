@@ -1,3 +1,18 @@
+function adjustLayoutForMobile() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 768) {
+    // Example: Apply specific styles for mobile
+    const elements = document.querySelectorAll('shopify-Icon-Control-Mobile');
+    elements.forEach((element) => {
+      adjustLayoutForMobile.style.display = 'block';
+
+    });
+  } 
+}
+window.onload = adjustLayoutForMobile;
+window.onresize = adjustLayoutForMobile;
+
 function adjustPadding(input) {
     const paddingValue = '70px'; // Set the desired padding value
   
