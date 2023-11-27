@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar with Icon, Search Box, and Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./app.css">
+  <script src="./app.js"></script>
+</head>
+
+<body>
+
+  <div class="navbarDesktop">
+    <!-- Icon at the left-hand side -->
+    <div class="shopify-Icon-Desktop">
+      <!-- Add your icon image or icon font here -->
+      <img src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg" alt="Icon" class="shopify-Icon-Control-Desktop">
+      <!-- Replace 'path/to/icon.png' with your image path -->
+      <!-- <img src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="" class="shopify-Icon-Control-Mobile"> -->
+    </div>
+
+    <!-- Search box at the center -->
+    <div class="search-Box-Desktop" onmouseover="focusInput()">
+      <input type="text" class="search-Input-Desktop" placeholder="Search" oninput="adjustPadding(this)">
+      <img class="search-Icon-Desktop" src="https://crushingit.tech/hackathon-assets/icon-search.svg" alt="Search Icon">
+    </div>    
+    
+
+    <!-- Button at the right-hand side -->
+    <div class="notification-Icon-Desktop">
+      <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="" onclick="notificationMessage()">
+    </div>
+    <button class="navbar-Collections-Button-Desktop" onclick="toggleDropdown()">Davii Collections</button>
+    <button class="navbar-DC-Button-Desktop"  onclick="toggleDropdown()">DC</button>
+    
+    
+  <div class="dc-Menu-DropdownContainer" >
+    <div class="dc-Menu-Dc-Text2-Collections">
+      <div class="dc-Menu-DropdownContainer-Dc-Text">DC</div>
+      <div class="dc-Menu-DropdownContainer-Dc-Collections">Davii Collections</div>
+      <img src="" alt="" class="dc-Menu-DropdownContainer-Dc-Collections-Mark-Img">
+  </div>
+  <div class="dc-Menu-DropdownContainer-AllStores-Img-Container">
+  <img src="https://crushingit.tech/hackathon-assets/icon-store.svg" alt="" class="all-Stores-Image">
+  <div class="all-Stores-Text">All Stores</div>
+  </div>
+  <li class="menu-Item">
+    <a href="" role="menuitem" class="help-center">Help Center</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">Change Log</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">Community forums</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">Hire A shopify Partner</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">Keyboard shortcuts</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">David Micheal</a><br>davidmicheal@gmail.com
+  </li>
+  <li class="menu-Item">
+    <a href="" role="menuitem">Manage Account</a>
+  </li>
+  <li class="menu-Item">
+    <a href="" >Log Out</a>
+  </li>
+  </div>
+</div>
+  <div class="extend-Your-Trial-Div-Desktop-Parent-Container">
+    <div class="extend-Your-Trial-Div-Desktop">
+      <p class="extend-Your-One-Month-Trial-Desktop-Text">Extend your trial for $1/month for 3 months on select plans.</p>
+      <button class="select-A-Plan-Button-Desktop">Select a plan</button>
+      <img class="extend-Your-Trial-Div-Desktop-Close-Button" src="https://crushingit.tech/hackathon-assets/icon-cross.svg" alt="">
+    </div>
+    <div class="notification-Icon-Message-Desktop" >
+      <div class="alert-Text-notification-Icon-Message-Desktop">
+        <p>Alerts</p>
+        <img class="alert-Text-Filter-Icon-notification-Icon-Message-Desktop" src="https://crushingit.tech/hackathon-assets/icon-filter.svg" alt="">
+        <img class="alert-Text-Check-Empty-Circle-Icon-notification-Icon-Message-Desktop" src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg" alt="">
+      </div>
+      <div class="alert-About-Your-notification-Icon-Message-Desktop">Alerts about your store and account will show here</div>
+    </div>
+  </div>
+  <div class="setup-Guide-Container">
+    <div class="setup-Guide-Text">
+      <p>Setup guide</p>
+      <div class="setup-Guide-Hide-And-Show-Icon">
+        <img id="arrowDown" src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="">
+        <img id="arrowUp" src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg" alt="">
+      </div>
+
+    </div>
+    <div class="use-This-Personalised-Guide">
+      <p>Use this personalised guide to get you up and running</p>
+      <div>
+        <span id="selectedCount">0/5 completed</span>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="steps-Div" style="display: none;">
+    <div class="option-Customize-your-Online-Store-Container">
+      <div class="option-Customize-your-Online-Store">
+        <img id="option-1" class="option-Customize-your-Online-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <span class="option-Customize-your-Online-Store-Text">Customize your online store</span><br>
+      </div>
+      <div class="option-Div">
+      <div class="option-Customize-Choose-A-Theme">
+        <p>Choose a theme and add your logo, colors, and images to reflect your brand. <br> 
+        <a href="" class="learn-More">Learn more</a><br><br>
+        <button class="option-Customize-Theme-Button">Customize theme</button>
+        </p>
+        <div class="option-Customize-Your-Store-image-container">
+          <img class="option-Customize-Your-Store-Image" src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="option-Add-Your-First-Product-Container">
+      <div class="option-Add-Your-First-Product">
+        <img id="option-2"class="option-Add-Your-First-Product-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <span class="option-Add-Your-First-Product-Text">Add your first product</span><br>
+      </div>
+      <div class="option-Div">
+      <div class="option-Add-Write-A-Description" >
+        <p>Write a description, add photos, and set pricing for the products you plan to <br> sell.
+        <a href="" class="Add-Your-First-learn-More">Learn more</a><br><br>
+        <button class="option-Add-Product-Button">Add Your Product</button><a href="" class="option-Import-Product-Link">Import Product</a>
+        </p>
+        <div class="option-Produce-image-container">
+          <img class="option-Produce-image" src="https://crushingit.tech/hackathon-assets/product.png" alt="">
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="option-Add-A-Custom-Domain-Container">
+      <div class="option-Add-A-Custom-Domain">
+        <img id="option-3" class="option-Add-A-Custom-Domain-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <span class="option-Add-A-Custom-Domain-Text">Add A custom domain</span><br>
+      </div>
+      <div class="option-Div">
+      <div class="option-Your-Custom-Domain">
+        <p>Your current domain is 222219.myshopify.com but you can add a custom domain<br>to help customers find your online store.
+        <a href="" class="Add-A-Custom-Domain-learn-More">Learn more</a><br><br>
+        <button class="option-Add-A-Domain-Button">Add domain</button>
+        </p>
+        <div class="option-Add-A-Custom-Domain-image-container">
+          <img class="option-Add-A-Custom-Domain-image" src="https://crushingit.tech/hackathon-assets/website.png" alt="">
+        </div>
+      </div>
+      </div>
+    <div class="name-Your-Store-Container">
+      <div class="name-Your-Store">
+        <img id="option-4"class="name-Your-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <span class="name-Your-Store-Text">Name your store</span><br>
+      </div>
+      <div class="option-Div">
+      <div class="your-Temporary-Store-Name">
+        <p>Your temporary store name is currently Davii collections. The store name<br>appears in your admin and your online store.
+        <a href="" class="your-Temporary-Store-Name-learn-More">Learn more</a><br><br>
+        <button class="name-Store-Button">Name store</button>
+        </p>
+        <div class="name-Your-Store-image-container">
+          <img class="name-Your-Store-image" src="https://crushingit.tech/hackathon-assets/name-store.png" alt="">
+        </div>
+      </div>
+      </div>
+    <div class="set-Up-Payment-Provider-Container">
+      <div class="set-Up-Payment-Provider">
+        <img  id="option-5"class="set-Up-Payment-Provider-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <span class="set-Up-Payment-Provider-Text">Set up payment provider</span><br>
+      </div>
+      <div class="option-Div">
+      <div class="choose-Your-Payment-Provider">
+        <p>Choose a payment provider to start accepting payments.You’ll need to create<br>with the payment provider and set it up with your Shopify store. <br>
+        <a href="" class="choose-Your-Payment-Provider-learn-More">Learn more</a><br><br>
+        <button class="setup-Payment-Button">Setup payment</button>
+        </p>
+        <div class="set-Up-Payment-Provider-Image-container">
+          <img class="set-Up-Payment-Provider-Image" src="https://crushingit.tech/hackathon-assets/payment.png" alt="">
+        </div>
+      </div>
+      </div>
+
+   
+    
+    </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

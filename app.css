@@ -1,0 +1,1125 @@
+
+body{
+  /* overflow-x: hidden; */
+}
+.navbarDesktop {
+  display: flex;
+  width: auto;
+  padding: 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--grey-grey-300, #1A1A1A);
+}
+
+.search-Box-Desktop {
+  position: relative;
+  width: 40%;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  justify-self: center;
+  /* Center the box */
+  margin-left: 270px;
+}
+
+/* Style for the search input */
+.search-Input-Desktop {
+  display: flex;
+  width: 400px;
+  height: 32px;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid var(--stroke-s-200, #616161);
+  background: var(--grey-g-200, #303030);
+  color: white;
+  padding-left: 50px;
+}
+
+.search-Input-Desktop::placeholder {
+  color: var(--grey-g-100, #B5B5B5);
+
+  /* Text-13/medium */
+  font-family: "Inter";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 18.2px */
+}
+
+.search-Input-Desktop:hover {
+  display: flex;
+  border: 1px solid var(--stroke-s-100, #E1E1E1);
+  background: var(--grey-g-200, #303030);
+}
+
+.search-Input-Desktop:focus {
+  display: flex;
+  width: 480px;
+  height: 32px;
+  padding: 8px;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid var(--White, #FFF);
+  background: var(--grey-g-200, #303030);
+}
+
+.search-Input-Desktop:active {
+  display: flex;
+  width: 480px;
+  height: 32px;
+  padding: 8px;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid var(--White, #FFF);
+  background: var(--grey-g-200, #303030);
+}
+
+/* Style for the search icon */
+.search-Icon-Desktop {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 04px;
+  /* Adjust the position of the icon */
+  margin-left: 6px;
+  transform: translateY(-50%);
+  z-index: 2;
+  /* Ensure icon is above the input */
+
+  filter: invert(100%);
+  /* Change icon color to white */
+}
+
+.notification-Icon-Desktop {
+  display: flex;
+  padding: 6px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--grey-g-200, #303030);
+  cursor: pointer;
+  
+}
+
+/* Style for the image icon */
+.notification-Icon-Desktop img {
+  width: 32px;
+  /* Adjust icon size */
+  height: 23px;
+  /* Adjust icon size */
+  filter: brightness(4960%) contrast(100%);
+  /* Adjust brightness and contrast */
+}
+
+.notification-Icon-Desktop:hover {
+  background-color: #616161;
+  filter: brightness(140%) contrast(70%);
+}
+
+.notification-Icon-Desktop:focus {
+  box-shadow: 0px 0px 0px 3px #005BD3;
+  background-color: #656266;
+  filter: brightness(140%) contrast(70%);
+}
+
+.notification-Icon-Desktop:active {
+  background-color: #656266;
+  filter: brightness(140%) contrast(70%);
+}
+
+.notification-Icon-Desktop img:hover {
+  width: 32px;
+  /* Adjust icon size */
+  height: 23px;
+  /* Adjust icon size */
+  filter: brightness(4960%) contrast(70%);
+  /* Adjust brightness and contrast */
+}
+
+.navbar-Collections-Button-Desktop {
+  display: inline-block;
+  position: relative;
+  left: -10%;
+  width: 150px;
+  height: 35px;
+  padding: 0;
+  margin-right: 0; /* Remove margin between buttons */
+  border: none;
+  border-radius: 8px;
+  background-color: #303030;
+  font-family: 'Inter', sans-serif;
+  color: #E1E1E1;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  line-height: 15.6px;
+  font-weight: 500;
+margin-left: 135px;
+}
+
+.navbar-Collections-Button-Desktop:hover {
+  background-color: #616161;
+}
+
+.navbar-Collections-Button-Desktop:focus {
+  background-color: #616161;
+  box-shadow: 0px 0px 0px 3px #005BD3;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.60px;
+  word-wrap: break-word;
+  font-style: normal;
+  margin-top: 0.5em;
+  /* Adjust top margin for spacing */
+  margin-bottom: 0.5em;
+  /* Adjust bottom margin for spacing */
+}
+
+.navbar-Collections-Button-Desktop:active {
+  background-color: #656266;
+
+}
+
+.navbar-DC-Button-Desktop {
+  display: inline-block; /* Change to inline-block */
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: #36FBA1;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: -130px;
+}
+
+.navbar-DC-Button-Desktop:hover {
+  background-color: #36FBA1;
+  padding: 10px 4.5px 9px 5.5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-DC-Button-Desktop :focus {
+  background-color: #36FBA1;
+  box-shadow: 0px 0px 0px 3px #005BD3;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.60px;
+  word-wrap: break-word;
+  font-style: normal;
+  padding: 9px 4.5px 10px 5.5px;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 5px 10px 5px;
+  display: flex;
+}
+
+.navbar-DC-Button-Desktop:active {
+  background-color: #36FBA1;
+
+}
+.dc-Menu-DropdownContainer{
+  display: none; /* Initially hide the dropdown container */
+  position: absolute; /* Position it absolutely */
+  top: calc(10% + 10px); /* Position it below its parent container */
+  left: 90%; /* Center it horizontally */
+  transform: translateX(-50%);
+  z-index: 999; /* Ensure it's above other elements */
+  width: 250px;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  border: 1px #DBDBDB solid;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+  padding-left: 10px;
+  display: none;
+}
+/* Flex container */
+.dc-Menu-Dc-Text2-Collections {
+  width: 100%;
+  height: 100%;
+  background: #F1F1F1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start; /* Adjusted alignment */
+  align-items: center;
+}
+
+.dc-Menu-DropdownContainer-Dc-Text {
+  background-color: #36FBA1;
+  border: 2px solid #36FBA1;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 5.25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Removed margin */
+}
+
+.dc-Menu-DropdownContainer-Dc-Collections {
+  color: #303030;
+  font-size: 13px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin: 0; /* Removed margin */
+}
+
+
+/* Individual elements */
+.dc-Menu-DropdownContainer-Dc-Text,
+.dc-Menu-DropdownContainer-Dc-Collections,
+.dc-Menu-DropdownContainer-Dc-Collections-Mark-Img {
+  margin-left: 2px; /* Default margin for the first element */
+}
+
+/* Adjusted margins */
+.dc-Menu-DropdownContainer-Dc-Collections {
+  margin-left: 10px; /* Adjusted margin for the third element */
+}
+/* Flex container */
+.dc-Menu-DropdownContainer-AllStores-Img-Container {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Adjustments for individual elements */
+.all-Stores-Image {
+  /* Adjust styles for the image container */
+  margin-right: 10px;
+}
+
+.menu-Item{
+  text-decoration: none;
+  cursor: pointer;
+  list-style-type: none;
+  margin-top: 4px;
+  color: #303030;
+ font-size: 13px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 18.20px;
+ word-wrap: break-word;
+}
+.menu-Item>a{
+  text-decoration: none;
+  color: #303030;
+ font-size: 13px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 18.20px;
+ word-wrap: break-word;
+}
+.all-Stores-Text {
+color: #303030;
+ font-size: 13px;
+ font-family: Inter;
+ font-weight: 400;
+ line-height: 18.20px;
+ word-wrap: break-word
+}
+.menu-Item:hover{
+  border: 2px solid #005BD3;
+  border-radius: 8px;
+  width: 94%; height: 100%; padding: 6px;
+}
+
+.extend-Your-Trial-Div-Desktop-Parent-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: 20px;
+  position: relative; /* Important to allow z-index to work */
+  z-index: 1;
+}
+
+.extend-Your-Trial-Div-Desktop {
+  width: 800px;
+  padding: 0px 0px 0px 20px;
+  border-radius: 8px;
+  background: var(--grey-grey-300, #1A1A1A);
+  color: #E3E3E3;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.content-container {
+  /* Margin between text and button */
+}
+
+.select-A-Plan-Button-Desktop {
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  margin-left: 335px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: var(--White, #FFF);
+  box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 15.6px */
+  font-family: 'Inter', sans-serif;
+  color: var(--font-dark, #323232);
+}
+
+.select-A-Plan-Button-Desktop:hover {
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: #F7F7F7;
+  box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+
+}
+
+.select-A-Plan-Button-Desktop:focus {
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  background: #F7F7F7;
+  box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+}
+
+.select-A-Plan-Button-Desktop:active {
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: var(--White, #FFF);
+  box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
+
+}
+
+.extend-Your-Trial-Div-Desktop-Close-Button {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  filter: brightness(4960%) contrast(100%);
+  margin-left: 6px
+}
+
+.notification-Icon-Message-Desktop {
+  display: inline-flex;
+  padding: 23px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke-s-50, #DBDBDB);
+  background: var(--White, #FFF);
+  width: 250px;
+  margin-left: -60px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+  height: 45px;
+  display: none;
+ 
+}
+
+.alert-Text-notification-Icon-Message-Desktop {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-top: -20px;
+  margin-left: -8px;
+}
+
+.alert-Text-Filter-Icon-notification-Icon-Message-Desktop {
+  filter: brightness(4960%) contrast(10%);
+  display: flex;
+  margin-left: 140px;
+
+}
+
+.alert-Text-Check-Empty-Circle-Icon-notification-Icon-Message-Desktop {
+  filter: brightness(4960%) contrast(10%);
+  display: flex;
+  margin-left: 10px;
+
+}
+
+.alert-About-Your-notification-Icon-Message-Desktop {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 8px;
+  margin-top: -20px;
+  background-color: #F1F1F1;
+  color: var(--font-mid-2, #616161);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: -4px;
+}
+
+.setup-Guide-Container {
+  display: flex;
+  width: 800px;
+  padding: 8px;
+  flex-direction: column;
+  gap: -2px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke-s-50, #DBDBDB);
+  background: var(--White, #FFF);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  margin-top: 7px;
+  margin-left: 289px;
+}
+
+.setup-Guide-Text {
+  display: flex;
+  /* Make it a flex container */
+  justify-content: space-between;
+  /* Align items inline and separate them */
+  align-items: center;
+  /* Vertically center items */
+  line-height: 0%;
+  /* 19.6px */
+  color: var(--font-dark, var(--grey-g-200, #303030));
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.setup-Guide-Hide-And-Show-Icon {
+  display: flex;
+  padding: 4px;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.use-This-Personalised-Guide {
+  color: var(--font-dark, var(--grey-g-200, #303030));
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 18.2px */
+}
+
+/* .progress-bar {
+  width: 100px;
+  height: 4px;
+  border: 1px thick;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #B5B5B5;
+}
+
+.progress-track {
+  height: 100%;
+  background-color: #ddd;
+  width: 20%;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20px;
+  background-color: #303030;
+} */
+#selectedCount {
+  display: inline-block;
+  margin-right: 40px; /* Set margin between selectedCount and progress-container */
+}
+
+.progress-container {
+  display: inline-block;
+  vertical-align: middle; /* Aligns inline elements vertically */
+}
+
+.progress-bar {
+  width: 100px; /* Fixed width of the progress bar */
+  height: 4px;
+  background-color: #B5B5B5;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #303030;
+  transition: width 0.3s ease-in-out;
+}
+
+/* CSS keyframe animation for spinning */
+/* CSS keyframe animation for spinning */
+/* CSS keyframe animation for spinning */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animation to spinnerURL */
+img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"] {
+  filter: brightness(90%) contrast(10%);
+  animation: spin 0.5s linear infinite;
+}
+
+
+#arrowUp {
+  display: none;
+}
+.option-Div{
+  display: none;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-container img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.option-Customize-your-Online-Store-Container {
+  width: auto;
+  height: auto;
+  padding: 2px;
+  background: #F3F3F3;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.option-Customize-your-Online-Store {
+  display: flex;
+  align-items: center;
+}
+
+.option-Customize-your-Online-Store-Icon-Dashed-Circle {
+  filter:brightness(290%) contrast(20%);
+  height: 30px;
+  margin-right: 8px;
+  /* Adjust the margin between the image and text */
+
+}
+
+.option-Customize-your-Online-Store-Text {
+  color: #303030;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: 0;
+  /* Remove the margin-top for the text */
+}
+
+.option-Customize-Choose-A-Theme {
+  display: flex;
+  color: #616161;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: -10px;
+  margin-left: 40px;
+}
+
+.learn-More {
+  color: #005BD3;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 19.60px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.option-Customize-Your-Store-image-container {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Set the height as needed */
+  /* Other styles for container if required */
+  margin-top: -20px;
+  margin-left: 140px;
+  flex-direction: column;
+}
+
+.option-Customize-Your-Store-Image {
+  max-width: 100%;
+  /* Ensure the image does not exceed its container's width */
+  max-height: 100%;
+  /* Ensure the image does not exceed its container's height */
+  display: flex;
+}
+
+.option-Customize-Theme-Button {
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border-top: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  border-right: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  border-left: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+.option-Add-Your-First-Product-Container{
+  width: auto;
+  height: auto;
+  padding: 2px;
+  background: #F3F3F3;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+.option-Add-Your-First-Product{
+  display: flex;
+  align-items: center;
+}
+
+.option-Add-Your-First-Product-Icon-Dashed-Circle{
+  filter:brightness(290%) contrast(20%);
+  height: 30px;
+  margin-right: 8px;
+  /* Adjust the margin between the image and text */
+}
+
+.option-Add-Your-First-Product-Text {
+  color: #303030;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: 0;
+  /* Remove the margin-top for the text */
+}
+
+.option-Add-Write-A-Description {
+  display: flex;
+  color: #616161;
+  font-size: 13px;
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 18.20px;
+  margin-top: -10px;
+  margin-left: 40px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.Add-Your-First-learn-More{
+  color: #005BD3;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 19.60px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.option-Produce-image-container {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Set the height as needed */
+  /* Other styles for container if required */
+  margin-top: -20px;
+  margin-left: 140px;
+  flex-direction: column;
+}
+
+.option-Produce-image {
+  max-width: 100%;
+  /* Ensure the image does not exceed its container's width */
+  height: 100%;
+  /* Ensure the image does not exceed its container's height */
+  display: flex;
+}
+
+.option-Add-Product-Button{
+  display: inline-block; /* Change display to inline-block */
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-decoration: none; /* Optional */
+  margin-right: 10px; /* Add margin for spacing */
+}
+.option-Import-Product-Link{
+  color: #323232;
+   font-size: 12px;
+   font-family: "Inter";
+   font-weight: 600;
+   line-height: 15.60px;
+   word-wrap: break-word;
+   text-decoration: none;
+   margin-left: 20px;
+}
+.option-Add-A-Custom-Domain-Container{
+  width: auto;
+  height: auto;
+  padding: 2px;
+  background: #F3F3F3;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+.option-Add-A-Custom-Domain{
+  display: flex;
+  align-items: center;
+}
+
+.option-Add-A-Custom-Domain-Icon-Dashed-Circle{
+  filter:brightness(290%) contrast(20%);
+  height: 30px;
+  margin-right: 8px;
+  /* Adjust the margin between the image and text */
+}
+
+.option-Add-A-Custom-Domain-Text{
+  color: #303030;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: 0;
+  /* Remove the margin-top for the text */
+}
+
+.option-Your-Custom-Domain {
+  display: flex;
+  color: #616161;
+  font-size: 13px;
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 18.20px;
+  margin-top: -10px;
+  margin-left: 40px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+.Add-A-Custom-Domain-learn-More{
+  color: #005BD3;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 19.60px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.option-Add-A-Custom-Domain-image-container{
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Set the height as needed */
+  /* Other styles for container if required */
+  margin-top: -20px;
+  margin-left: 100px;
+  flex-direction: column;
+}
+
+.option-Add-A-Custom-Domain-image{
+  max-width: 100%;
+  /* Ensure the image does not exceed its container's width */
+  height: 100%;
+  /* Ensure the image does not exceed its container's height */
+  display: flex;
+}
+
+.option-Add-A-Domain-Button{
+  display: inline-block; /* Change display to inline-block */
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-decoration: none; /* Optional */
+  margin-right: 10px; /* Add margin for spacing */
+}
+.name-Your-Store-Container{
+  width: auto;
+  height: auto;
+  padding: 2px;
+  background: #F3F3F3;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+.name-Your-Store{
+  display: flex;
+  align-items: center;
+}
+
+.name-Your-Store-Icon-Dashed-Circle{
+  filter:brightness(290%) contrast(20%);
+  height: 30px;
+  margin-right: 8x;
+  margin-left: -10px;
+  /* Adjust the margin between the image and text */
+  
+}
+
+.name-Your-Store-Text{
+  color: #303030;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: 0;
+  /* Remove the margin-top for the text */
+  margin-left: 10px;
+}
+
+.your-Temporary-Store-Name{
+  display: flex;
+  color: #616161;
+  font-size: 13px;
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 18.20px;
+  margin-top: -10px;
+  margin-left: 40px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-left: 30px;
+}
+
+
+.your-Temporary-Store-Name-learn-More{
+  color: #005BD3;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 19.60px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.name-Your-Store-image-container{
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Set the height as needed */
+  /* Other styles for container if required */
+  margin-top: -20px;
+  margin-left: 150px;
+  flex-direction: column;
+}
+
+.name-Your-Store-image{
+  max-width: 100%;
+  /* Ensure the image does not exceed its container's width */
+  height: 100%;
+  /* Ensure the image does not exceed its container's height */
+  display: flex;
+}
+
+.name-Store-Button{
+  display: inline-block; /* Change display to inline-block */
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-decoration: none; /* Optional */
+  margin-right: 10px; /* Add margin for spacing */
+}
+.set-Up-Payment-Provider-Container{
+  width: auto;
+  height: auto;
+  padding: 2px;
+  background: #F3F3F3;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+.set-Up-Payment-Provider{
+  display: flex;
+  align-items: center;
+}
+
+.set-Up-Payment-Provider-Icon-Dashed-Circle{
+  filter:brightness(290%) contrast(20%);
+  height: 30px;
+  margin-right: 8px;
+  /* Adjust the margin between the image and text */
+  margin-left: -20px;
+}
+
+.set-Up-Payment-Provider-Text{
+  color: #303030;
+  font-size: 13px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 18.20px;
+  word-wrap: break-word;
+  margin-top: 0;
+  /* Remove the margin-top for the text */
+  margin-left: 7px;
+
+}
+
+.choose-Your-Payment-Provider{
+  display: flex;
+  color: #616161;
+  font-size: 13px;
+  font-family: "Inter";
+  font-weight: 500;
+  line-height: 18.20px;
+  margin-top: -10px;
+  margin-left: 40px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-left: 23px;
+}
+
+
+.choose-Your-Payment-Provider-learn-More{
+  color: #005BD3;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 19.60px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.set-Up-Payment-Provider-Image-container{
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Set the height as needed */
+  /* Other styles for container if required */
+  margin-top: -20px;
+  margin-left: 120px;
+  flex-direction: column;
+}
+
+.set-Up-Payment-Provider-Image{
+  max-width: 100%;
+  /* Ensure the image does not exceed its container's width */
+  height: 100%;
+  /* Ensure the image does not exceed its container's height */
+  display: flex;
+}
+
+.setup-Payment-Button{
+  display: inline-block; /* Change display to inline-block */
+  padding: 6px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--stroke-light-100, rgba(255, 255, 255, 0.20));
+  background: #404040;
+  box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+  color: var(--font-light, #F6F3F6);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-decoration: none; /* Optional */
+  margin-right: 10px; /* Add margin for spacing */
+}
