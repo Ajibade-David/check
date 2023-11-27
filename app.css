@@ -491,8 +491,6 @@ color: #303030;
 .setup-Guide-Container {
   display: flex;
   width: 800px;
-  max-width: 100%;
-  padding: 8px;
   flex-direction: column;
   gap: -2px;
   border-radius: 18px;
