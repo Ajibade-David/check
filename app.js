@@ -209,6 +209,71 @@ function notificationMessageMobile() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const list = document.getElementById('list');
+  const listItems = Array.from(document.querySelectorAll('#list li'));
+  let selectedIndex = -1;
+
+  function highlightItem(index) {
+    listItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add('selected');
+        item.setAttribute('aria-selected', 'true');
+        item.focus();
+        if (!isElementInViewport(item)) {
+          item.scrollIntoView({ block: 'nearest' });
+        }
+      } else {
+        item.classList.remove('selected');
+        item.setAttribute('aria-selected', 'false');
+      }
+    });
+  }
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  list.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (event.key === 'ArrowDown') {
+        selectedIndex = (selectedIndex + 1) % listItems.length;
+      } else if (event.key === 'ArrowUp') {
+        selectedIndex = selectedIndex <= 0 ? listItems.length - 1 : selectedIndex - 1;
+      }
+      highlightItem(selectedIndex);
+    } else if (event.key === 'Enter') {
+      event.preventDefault();
+      if (selectedIndex > -1) {
+        // Perform the action on pressing Enter (e.g., navigate to the selected item's link)
+        console.log(`Selected item: ${listItems[selectedIndex].innerText}`);
+      }
+    }
+  });
+
+  listItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+      selectedIndex = index;
+      highlightItem(selectedIndex);
+    });
+
+    item.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        selectedIndex = index;
+        highlightItem(selectedIndex);
+      }
+    });
+  });
+});
+
   
 
 

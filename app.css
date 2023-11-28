@@ -281,6 +281,16 @@
     padding-left: 10px;
     display: none;
   }
+  .selected {
+    background-color: #f0f0f0;
+    color: blue;
+    /* Add any other styling for the selected item here */
+  }
+  
+  li:focus {
+    outline: 2px solid blue; /* Change the outline color for focused item */
+    /* You can customize other focus styles here if needed */
+  }
   /* Flex container */
   .dc-Menu-Dc-Text2-Collections {
     width: 100%;
@@ -1210,6 +1220,8 @@
       overflow-x: hidden;
 
     }
+
+    
     .search-Box-Desktop {
       position: absolute;
       width: 50%;
