@@ -70,7 +70,7 @@ body {
   transform: translateY(-50%);
   z-index: 2;
   filter: invert(100%);
-
+  
 }
 
 .notification-Icon-Desktop {
@@ -328,35 +328,14 @@ li:focus {
 .all-Stores-Image {
   margin-right: 10px;
 }
-
-.all-Stores-Image:hover {
-  padding: 6px;
-  background: #F1F1F1;
-  border-radius: 8px;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  display: inline-flex
+.all-Stores-Image:hover{
+ padding: 6px; background: #F1F1F1; border-radius: 8px; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex
 }
-
-.all-Stores-Image:focus {
-  padding: 6px;
-  background: #F0F0F0;
-  border-radius: 8px;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  display: inline-flex
+.all-Stores-Image:focus{
+ padding: 6px; background: #F0F0F0; border-radius: 8px; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex
 }
-
-.all-Stores-Image:active {
-  padding: 6px;
-  border-radius: 8px;
-  border: 2px #005BD3 solid;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  display: inline-flex
+.all-Stores-Image:active{
+  padding: 6px; border-radius: 8px; border: 2px #005BD3 solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex
 }
 
 .menu-Item {
@@ -702,7 +681,7 @@ img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"].spin-animat
   filter: brightness(290%) contrast(20%);
   height: 30px;
   margin-right: 8px;
-
+ 
 
 }
 
@@ -714,7 +693,7 @@ img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"].spin-animat
   line-height: 18.20px;
   word-wrap: break-word;
   margin-top: 0;
-
+  
 }
 
 .option-Customize-Choose-A-Theme {
@@ -1273,6 +1252,7 @@ img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"].spin-animat
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
+    /* Ensure it's above other elements */
     width: 250px;
     padding-top: 9px;
     padding-bottom: 6px;

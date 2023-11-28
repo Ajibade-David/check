@@ -1,10 +1,12 @@
+
+
 function adjustPadding(input) {
-  const paddingValue = '70px';
+  const paddingValue = '70px'; // Set the desired padding value
 
   if (input.value.length > 0) {
     input.style.paddingLeft = paddingValue;
   } else {
-    input.style.paddingLeft = '50px';
+    input.style.paddingLeft = '50px'; // Default padding when there's no text
   }
 }
 
@@ -12,8 +14,9 @@ function focusInput() {
   const inputField = document.querySelector('.search-Input-Desktop');
   inputField.focus();
 }
-document.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (event) {
+document.addEventListener('DOMContentLoaded', function() {
+  // Event delegation for handling click on the close button image
+  document.addEventListener('click', function(event) {
     const closeButton = event.target.closest('.extend-Your-Trial-Div-Desktop-Close-Button');
     if (closeButton) {
       const parentContainer = document.querySelector('.extend-Your-Trial-Div-Desktop-Parent-Container');
@@ -22,21 +25,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const selectPlanButton = document.querySelector('.select-A-Plan-Button-Desktop');
 
-  selectPlanButton.addEventListener('click', function () {
+  selectPlanButton.addEventListener('click', function() {
     window.location.href = 'https://www.shopify.com/pricing';
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const selectPlanButtonMobile = document.querySelector('.select-A-Plan-Button-mobile');
 
-  selectPlanButtonMobile.addEventListener('click', function () {
+  selectPlanButtonMobile.addEventListener('click', function() {
     window.location.href = 'https://www.shopify.com/pricing';
   });
 });
-
+  
 document.addEventListener("DOMContentLoaded", function () {
   const arrowDown = document.getElementById('arrowDown');
   const arrowUp = document.getElementById('arrowUp');
@@ -130,9 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
               } else {
                 if (currentDiv) {
                   currentDiv.style.display = 'none';
+                  currentDiv.style.background = ''; // Resetting background when hiding the div
 
                   const prevSibling = currentDiv.previousElementSibling;
                   if (prevSibling) {
+                    prevSibling.style.background = ''; // Clear the previous element's background
                   }
                 }
                 if (nextDiv) {
@@ -153,9 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         if (currentDiv.style.display !== 'block') {
-          currentDiv.style.background = ''; previousElementSibling;
+          currentDiv.style.background = ''; // Resetting background for non-selected divs
+          const prevSibling = currentDiv.previousElementSibling;
           if (prevSibling) {
-            prevSibling.style.background = '';
+            prevSibling.style.background = ''; // Clear the previous element's background
           }
         }
       }
@@ -172,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleEvents() {
       handleImageSelection(img);
-      img.style.outline = "none";
+      img.style.outline = "none"; // Remove blue outline
 
       const totalImages = images.length;
       const currentIndex = Array.from(images).indexOf(img);
@@ -180,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       while (images[nextIndex].classList.contains('selected')) {
         nextIndex = (nextIndex + 1) % totalImages;
-        if (nextIndex === currentIndex) break;
+        if (nextIndex === currentIndex) break; // Break loop if cycled through all options
       }
 
       images[nextIndex].focus();
@@ -208,46 +214,52 @@ document.addEventListener("DOMContentLoaded", function () {
     handleImageEvents(img);
   });
 
-  document.addEventListener('keydown', function (event) {
+  document.addEventListener('keydown', function(event) {
     const activeElement = document.activeElement;
     if (activeElement && activeElement.tagName.toLowerCase() === 'img' && event.code === 'Escape') {
-      activeElement.blur();
+      activeElement.blur(); // Remove focus if an image is currently focused when pressing Escape
     }
   });
 });
 
 
+  
 
-
-
+  
 
 
 function toggleDropdown() {
-  const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
-  if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
-    dropdownContainer.style.display = 'block';
-  } else {
-    dropdownContainer.style.display = 'none';
-  }
+const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
+
+// Toggle the visibility of the dropdown container
+if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
+  dropdownContainer.style.display = 'block';
+} else {
+  dropdownContainer.style.display = 'none';
+}
 }
 function notificationMessage() {
-  const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
-  if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
-    notificationMessage.style.display = 'block';
-  } else {
-    notificationMessage.style.display = 'none';
-  }
+const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
+
+// Toggle the visibility of the dropdown container
+if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
+  notificationMessage.style.display = 'block';
+} else {
+  notificationMessage.style.display = 'none';
+}
 }
 function notificationMessageMobile() {
-  const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
-  if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
-    notificationMessageMobile.style.display = 'block';
-  } else {
-    notificationMessageMobile.style.display = 'none';
-  }
+const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
+
+// Toggle the visibility of the dropdown container
+if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
+  notificationMessageMobile.style.display = 'block';
+} else {
+  notificationMessageMobile.style.display = 'none';
+}
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const list = document.getElementById('list');
   const listItems = Array.from(document.querySelectorAll('#list li'));
   let selectedIndex = -1;
@@ -282,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
   }
 
-  list.addEventListener('keydown', function (event) {
+  list.addEventListener('keydown', function(event) {
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       if (event.key === 'ArrowDown') {
@@ -301,12 +313,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   listItems.forEach((item, index) => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', function() {
       selectedIndex = index;
       highlightItem(selectedIndex);
     });
 
-    item.addEventListener('keydown', function (event) {
+    item.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
         event.preventDefault();
         selectedIndex = index;
