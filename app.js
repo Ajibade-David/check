@@ -1,12 +1,10 @@
-
-
 function adjustPadding(input) {
-  const paddingValue = '70px'; // Set the desired padding value
+  const paddingValue = '70px';
 
   if (input.value.length > 0) {
     input.style.paddingLeft = paddingValue;
   } else {
-    input.style.paddingLeft = '50px'; // Default padding when there's no text
+    input.style.paddingLeft = '50px';
   }
 }
 
@@ -14,9 +12,8 @@ function focusInput() {
   const inputField = document.querySelector('.search-Input-Desktop');
   inputField.focus();
 }
-document.addEventListener('DOMContentLoaded', function() {
-  // Event delegation for handling click on the close button image
-  document.addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', function (event) {
     const closeButton = event.target.closest('.extend-Your-Trial-Div-Desktop-Close-Button');
     if (closeButton) {
       const parentContainer = document.querySelector('.extend-Your-Trial-Div-Desktop-Parent-Container');
@@ -25,21 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const selectPlanButton = document.querySelector('.select-A-Plan-Button-Desktop');
 
-  selectPlanButton.addEventListener('click', function() {
+  selectPlanButton.addEventListener('click', function () {
     window.location.href = 'https://www.shopify.com/pricing';
   });
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const selectPlanButtonMobile = document.querySelector('.select-A-Plan-Button-mobile');
 
-  selectPlanButtonMobile.addEventListener('click', function() {
+  selectPlanButtonMobile.addEventListener('click', function () {
     window.location.href = 'https://www.shopify.com/pricing';
   });
 });
-  
+
 document.addEventListener("DOMContentLoaded", function () {
   const arrowDown = document.getElementById('arrowDown');
   const arrowUp = document.getElementById('arrowUp');
@@ -73,62 +70,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (selectedDiv) {
     selectedDiv.style.display = 'block';
-  }
+    selectedDiv.style.background = '#F3F3F3';
 
+    const prevSibling = selectedDiv.previousElementSibling;
+    if (prevSibling) {
+      prevSibling.style.background = '#F3F3F3';
+    }
+  }
   function handleImageSelection(img) {
     const totalImages = images.length;
     const currentIndex = Array.from(images).indexOf(img);
     const currentDiv = document.querySelectorAll('.option-Div')[currentIndex];
 
-    if (img.classList.contains('selected')) {
-      img.classList.remove('selected');
-      img.classList.add('spin-animation');
-      img.src = spinnerURL;
-      img.style.filter = "brightness(90%) contrast(10%)";
+    for (let i = 0; i < images.length; i++) {
+      const currentDiv = document.querySelectorAll('.option-Div')[i];
+      const currentImg = images[i];
 
-      setTimeout(() => {
-        img.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
-        img.style.filter = '';
+      if (!currentDiv) {
+        continue;
+      }
 
-        if (currentDiv) {
-          currentDiv.style.display = 'block';
-        }
-      }, 800);
+      if (currentImg === img) {
+        if (img.classList.contains('selected')) {
+          img.classList.remove('selected');
+          img.classList.add('spin-animation');
+          img.src = spinnerURL;
+          img.style.filter = "brightness(90%) contrast(10%)";
 
-      count--;
-    } else {
-      img.classList.add('selected');
-      img.src = spinnerURL;
-      img.style.filter = "brightness(90%) contrast(10%)";
-      img.classList.add('spin-animation');
+          setTimeout(() => {
+            img.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
+            img.style.filter = '';
 
-      setTimeout(() => {
-        img.src = checkmarkURL;
-        img.style.filter = "brightness(90%) contrast(100%)";
-
-        for (let i = currentIndex + 1; i < totalImages; i++) {
-          const nextDiv = document.querySelectorAll('.option-Div')[i];
-          if (images[i].classList.contains('selected')) {
-            continue;
-          } else {
             if (currentDiv) {
-              currentDiv.style.display = 'none';
+              currentDiv.style.display = 'block';
+              currentDiv.style.background = '#F3F3F3';
+
+              const prevSibling = currentDiv.previousElementSibling;
+              if (prevSibling) {
+                prevSibling.style.background = '#F3F3F3';
+              }
             }
-            if (nextDiv) {
-              nextDiv.style.display = 'block';
-              break;
+          }, 800);
+
+          count--;
+        } else {
+          img.classList.add('selected');
+          img.src = spinnerURL;
+          img.style.filter = "brightness(90%) contrast(10%)";
+          img.classList.add('spin-animation');
+
+          setTimeout(() => {
+            img.src = checkmarkURL;
+            img.style.filter = "brightness(90%) contrast(100%)";
+
+            for (let i = currentIndex + 1; i < totalImages; i++) {
+              const nextDiv = document.querySelectorAll('.option-Div')[i];
+              if (images[i].classList.contains('selected')) {
+                continue;
+              } else {
+                if (currentDiv) {
+                  currentDiv.style.display = 'none';
+
+                  const prevSibling = currentDiv.previousElementSibling;
+                  if (prevSibling) {
+                  }
+                }
+                if (nextDiv) {
+                  nextDiv.style.display = 'block';
+                  nextDiv.style.background = '#F3F3F3';
+
+                  const prevSibling = nextDiv.previousElementSibling;
+                  if (prevSibling) {
+                    prevSibling.style.background = '#F3F3F3';
+                  }
+                  break;
+                }
+              }
             }
+          }, 800);
+
+          count++;
+        }
+      } else {
+        if (currentDiv.style.display !== 'block') {
+          currentDiv.style.background = ''; previousElementSibling;
+          if (prevSibling) {
+            prevSibling.style.background = '';
           }
         }
-
-        if (count === totalImages) {
-          document.querySelectorAll('.option-Div').forEach(div => {
-            div.style.display = 'none';
-          });
-        }
-      }, 800);
-
-      count++;
+      }
     }
 
     selectedCount.textContent = `${count}/5 completed`;
@@ -142,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleEvents() {
       handleImageSelection(img);
-      img.style.outline = "none"; // Remove blue outline
+      img.style.outline = "none";
 
       const totalImages = images.length;
       const currentIndex = Array.from(images).indexOf(img);
@@ -150,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       while (images[nextIndex].classList.contains('selected')) {
         nextIndex = (nextIndex + 1) % totalImages;
-        if (nextIndex === currentIndex) break; // Break loop if cycled through all options
+        if (nextIndex === currentIndex) break;
       }
 
       images[nextIndex].focus();
@@ -178,52 +208,46 @@ document.addEventListener("DOMContentLoaded", function () {
     handleImageEvents(img);
   });
 
-  document.addEventListener('keydown', function(event) {
+  document.addEventListener('keydown', function (event) {
     const activeElement = document.activeElement;
     if (activeElement && activeElement.tagName.toLowerCase() === 'img' && event.code === 'Escape') {
-      activeElement.blur(); // Remove focus if an image is currently focused when pressing Escape
+      activeElement.blur();
     }
   });
 });
 
 
-  
 
-  
+
+
 
 
 function toggleDropdown() {
-const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
-
-// Toggle the visibility of the dropdown container
-if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
-  dropdownContainer.style.display = 'block';
-} else {
-  dropdownContainer.style.display = 'none';
-}
+  const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
+  if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
+    dropdownContainer.style.display = 'block';
+  } else {
+    dropdownContainer.style.display = 'none';
+  }
 }
 function notificationMessage() {
-const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
-
-// Toggle the visibility of the dropdown container
-if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
-  notificationMessage.style.display = 'block';
-} else {
-  notificationMessage.style.display = 'none';
-}
+  const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
+  if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
+    notificationMessage.style.display = 'block';
+  } else {
+    notificationMessage.style.display = 'none';
+  }
 }
 function notificationMessageMobile() {
-const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
-
-// Toggle the visibility of the dropdown container
-if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
-  notificationMessageMobile.style.display = 'block';
-} else {
-  notificationMessageMobile.style.display = 'none';
-}
+  const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
+  if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
+    notificationMessageMobile.style.display = 'block';
+  } else {
+    notificationMessageMobile.style.display = 'none';
+  }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const list = document.getElementById('list');
   const listItems = Array.from(document.querySelectorAll('#list li'));
   let selectedIndex = -1;
@@ -258,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
     );
   }
 
-  list.addEventListener('keydown', function(event) {
+  list.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       if (event.key === 'ArrowDown') {
@@ -277,12 +301,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   listItems.forEach((item, index) => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
       selectedIndex = index;
       highlightItem(selectedIndex);
     });
 
-    item.addEventListener('keydown', function(event) {
+    item.addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
         selectedIndex = index;
