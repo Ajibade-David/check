@@ -1,17 +1,4 @@
-function adjustLayoutForMobile() {
-  const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 768) {
-    // Example: Apply specific styles for mobile
-    const elements = document.querySelectorAll('shopify-Icon-Control-Mobile');
-    elements.forEach((element) => {
-      adjustLayoutForMobile.style.display = 'block';
-
-    });
-  } 
-}
-window.onload = adjustLayoutForMobile;
-window.onresize = adjustLayoutForMobile;
 
 function adjustPadding(input) {
     const paddingValue = '70px'; // Set the desired padding value
@@ -42,6 +29,13 @@ function adjustPadding(input) {
     const selectPlanButton = document.querySelector('.select-A-Plan-Button-Desktop');
   
     selectPlanButton.addEventListener('click', function() {
+      window.location.href = 'https://www.shopify.com/pricing';
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const selectPlanButtonMobile = document.querySelector('.select-A-Plan-Button-mobile');
+  
+    selectPlanButtonMobile.addEventListener('click', function() {
       window.location.href = 'https://www.shopify.com/pricing';
     });
   });
@@ -202,6 +196,16 @@ function notificationMessage() {
     notificationMessage.style.display = 'block';
   } else {
     notificationMessage.style.display = 'none';
+  }
+}
+function notificationMessageMobile() {
+  const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
+
+  // Toggle the visibility of the dropdown container
+  if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
+    notificationMessageMobile.style.display = 'block';
+  } else {
+    notificationMessageMobile.style.display = 'none';
   }
 }
 
