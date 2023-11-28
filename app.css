@@ -282,7 +282,6 @@
     display: none;
   }
   .selected {
-    background-color: #f0f0f0;
     color: blue;
     /* Add any other styling for the selected item here */
   }
@@ -658,19 +657,22 @@
   /* CSS keyframe animation for spinning */
   /* CSS keyframe animation for spinning */
   /* CSS keyframe animation for spinning */
+  
   @keyframes spin {
     100% {
       transform: rotate(360deg);
     }
   }
 
-  /* Apply animation to spinnerURL */
-  img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"] {
+  img[src="https://crushingit.tech/hackathon-assets/icon-spinner.svg"].spin-animation {
     filter: brightness(90%) contrast(10%);
-    animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite !important;
   }
-
-
+  
+  /* Remove animation when focused */
+ .selected{
+animation: none !important;
+ }
   #arrowUp {
     display: none;
   }
@@ -1225,7 +1227,7 @@
     .search-Box-Desktop {
       position: absolute;
       width: 50%;
-      margin-left:50px;
+      margin-left:120px;
     }
     .search-Input-Desktop {
       width: 50%;
@@ -1255,6 +1257,7 @@
       border-radius: 8px;
       background: var(--grey-g-200, #303030);
       cursor: pointer;
+      
       
     }
     

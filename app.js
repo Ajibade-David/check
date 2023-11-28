@@ -1,63 +1,63 @@
 
 
 function adjustPadding(input) {
-    const paddingValue = '70px'; // Set the desired padding value
-  
-    if (input.value.length > 0) {
-      input.style.paddingLeft = paddingValue;
-    } else {
-      input.style.paddingLeft = '50px'; // Default padding when there's no text
+  const paddingValue = '70px'; // Set the desired padding value
+
+  if (input.value.length > 0) {
+    input.style.paddingLeft = paddingValue;
+  } else {
+    input.style.paddingLeft = '50px'; // Default padding when there's no text
+  }
+}
+
+function focusInput() {
+  const inputField = document.querySelector('.search-Input-Desktop');
+  inputField.focus();
+}
+document.addEventListener('DOMContentLoaded', function() {
+  // Event delegation for handling click on the close button image
+  document.addEventListener('click', function(event) {
+    const closeButton = event.target.closest('.extend-Your-Trial-Div-Desktop-Close-Button');
+    if (closeButton) {
+      const parentContainer = document.querySelector('.extend-Your-Trial-Div-Desktop-Parent-Container');
+      parentContainer.style.display = 'none';
     }
-  }
-  
-  function focusInput() {
-    const inputField = document.querySelector('.search-Input-Desktop');
-    inputField.focus();
-  }
-  document.addEventListener('DOMContentLoaded', function() {
-    // Event delegation for handling click on the close button image
-    document.addEventListener('click', function(event) {
-      const closeButton = event.target.closest('.extend-Your-Trial-Div-Desktop-Close-Button');
-      if (closeButton) {
-        const parentContainer = document.querySelector('.extend-Your-Trial-Div-Desktop-Parent-Container');
-        parentContainer.style.display = 'none';
-      }
-    });
   });
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const selectPlanButton = document.querySelector('.select-A-Plan-Button-Desktop');
-  
-    selectPlanButton.addEventListener('click', function() {
-      window.location.href = 'https://www.shopify.com/pricing';
-    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const selectPlanButton = document.querySelector('.select-A-Plan-Button-Desktop');
+
+  selectPlanButton.addEventListener('click', function() {
+    window.location.href = 'https://www.shopify.com/pricing';
   });
-  document.addEventListener('DOMContentLoaded', function() {
-    const selectPlanButtonMobile = document.querySelector('.select-A-Plan-Button-mobile');
-  
-    selectPlanButtonMobile.addEventListener('click', function() {
-      window.location.href = 'https://www.shopify.com/pricing';
-    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const selectPlanButtonMobile = document.querySelector('.select-A-Plan-Button-mobile');
+
+  selectPlanButtonMobile.addEventListener('click', function() {
+    window.location.href = 'https://www.shopify.com/pricing';
   });
-    
+});
+  
 document.addEventListener("DOMContentLoaded", function () {
-    const arrowDown = document.getElementById('arrowDown');
-    const arrowUp = document.getElementById('arrowUp');
-    const stepsDiv = document.querySelector('.steps-Div');
-  
-    arrowDown.addEventListener('click', function () {
-      stepsDiv.style.display = 'block';
-      arrowDown.style.display = 'none';
-      arrowUp.style.display = 'inline-block';
-    });
-  
-    arrowUp.addEventListener('click', function () {
-      stepsDiv.style.display = 'none';
-      arrowDown.style.display = 'inline-block';
-      arrowUp.style.display = 'none';
-    });
+  const arrowDown = document.getElementById('arrowDown');
+  const arrowUp = document.getElementById('arrowUp');
+  const stepsDiv = document.querySelector('.steps-Div');
+
+  arrowDown.addEventListener('click', function () {
+    stepsDiv.style.display = 'block';
+    arrowDown.style.display = 'none';
+    arrowUp.style.display = 'inline-block';
   });
-  
+
+  arrowUp.addEventListener('click', function () {
+    stepsDiv.style.display = 'none';
+    arrowDown.style.display = 'inline-block';
+    arrowUp.style.display = 'none';
+  });
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -69,14 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkmarkURL = "https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg";
 
   let count = 0;
-  let selectedDiv = document.querySelector('.option-Div'); // Select the first option-Div by default
+  let selectedDiv = document.querySelector('.option-Div');
 
-  // Show the first option-Div by default
   if (selectedDiv) {
     selectedDiv.style.display = 'block';
   }
 
-  function handleCheckboxSelection(img) {
+  function handleImageSelection(img) {
     const totalImages = images.length;
     const currentIndex = Array.from(images).indexOf(img);
     const currentDiv = document.querySelectorAll('.option-Div')[currentIndex];
@@ -84,33 +83,29 @@ document.addEventListener("DOMContentLoaded", function () {
     if (img.classList.contains('selected')) {
       img.classList.remove('selected');
       img.classList.add('spin-animation');
-      img.src = spinnerURL; // Show spinner when unselecting
+      img.src = spinnerURL;
       img.style.filter = "brightness(90%) contrast(10%)";
 
       setTimeout(() => {
         img.src = "https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg";
-        img.style.filter = ''; // Remove any filters applied
+        img.style.filter = '';
 
-        // Toggle the corresponding option-Div visibility when the image is deselected
         if (currentDiv) {
-          currentDiv.style.display = 'block'; // Show the associated div
+          currentDiv.style.display = 'block';
         }
-      }, 800); // Adjust the delay time as needed (in milliseconds)
+      }, 800);
 
       count--;
     } else {
       img.classList.add('selected');
-      img.src = spinnerURL; // Show spinner when selecting
+      img.src = spinnerURL;
       img.style.filter = "brightness(90%) contrast(10%)";
-
-      // Apply rotation animation to spinner image
-      img.classList.add('spin-animation'); // Add class to apply spin animation
+      img.classList.add('spin-animation');
 
       setTimeout(() => {
         img.src = checkmarkURL;
         img.style.filter = "brightness(90%) contrast(100%)";
 
-        // Find the next uncompleted option-Div to display
         for (let i = currentIndex + 1; i < totalImages; i++) {
           const nextDiv = document.querySelectorAll('.option-Div')[i];
           if (images[i].classList.contains('selected')) {
@@ -126,13 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        // Check if all checkboxes are selected and hide all divs
         if (count === totalImages) {
           document.querySelectorAll('.option-Div').forEach(div => {
             div.style.display = 'none';
           });
         }
-      }, 800); // Adjust the delay time as needed (in milliseconds)
+      }, 800);
 
       count++;
     }
@@ -141,72 +135,92 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBar.style.width = `${count * progressStep}px`;
   }
 
-  images.forEach((img, index) => {
-    img.addEventListener("click", function () {
-      handleCheckboxSelection(img);
-    });
+
+  function handleImageEvents(img) {
+    img.setAttribute('role', 'option');
+    img.setAttribute('aria-selected', 'false');
+
+    function handleEvents() {
+      handleImageSelection(img);
+      img.style.outline = "none"; // Remove blue outline
+
+      const totalImages = images.length;
+      const currentIndex = Array.from(images).indexOf(img);
+      let nextIndex = (currentIndex + 1) % totalImages;
+
+      while (images[nextIndex].classList.contains('selected')) {
+        nextIndex = (nextIndex + 1) % totalImages;
+        if (nextIndex === currentIndex) break; // Break loop if cycled through all options
+      }
+
+      images[nextIndex].focus();
+    }
+
+    img.addEventListener("click", handleEvents);
 
     img.addEventListener("keydown", function (event) {
       if (event.code === "Space" || event.code === "Enter") {
         event.preventDefault();
-        handleCheckboxSelection(img);
+        handleEvents();
       }
     });
 
     img.addEventListener("focus", function () {
-      img.style.outline = "2px solid blue"; // Just for visual indication
+      img.style.outline = "2px solid blue";
     });
 
     img.addEventListener("blur", function () {
-      img.style.outline = ""; // Remove outline when not focused
+      img.style.outline = "none";
     });
+  }
+
+  images.forEach((img, index) => {
+    handleImageEvents(img);
   });
 
-  document.addEventListener("keydown", function (event) {
-    const focusedElement = document.activeElement;
-    const focusedIndex = Array.from(images).indexOf(focusedElement);
-
-    if (event.code === "ArrowDown") {
-      event.preventDefault();
-      const nextIndex = focusedIndex < images.length - 1 ? focusedIndex + 1 : 0;
-      images[nextIndex].focus();
-    } else if (event.code === "ArrowUp") {
-      event.preventDefault();
-      const prevIndex = focusedIndex > 0 ? focusedIndex - 1 : images.length - 1;
-      images[prevIndex].focus();
+  document.addEventListener('keydown', function(event) {
+    const activeElement = document.activeElement;
+    if (activeElement && activeElement.tagName.toLowerCase() === 'img' && event.code === 'Escape') {
+      activeElement.blur(); // Remove focus if an image is currently focused when pressing Escape
     }
   });
 });
 
-function toggleDropdown() {
-  const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
 
-  // Toggle the visibility of the dropdown container
-  if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
-    dropdownContainer.style.display = 'block';
-  } else {
-    dropdownContainer.style.display = 'none';
-  }
+  
+
+  
+
+
+function toggleDropdown() {
+const dropdownContainer = document.querySelector('.dc-Menu-DropdownContainer');
+
+// Toggle the visibility of the dropdown container
+if (dropdownContainer.style.display === 'none' || dropdownContainer.style.display === '') {
+  dropdownContainer.style.display = 'block';
+} else {
+  dropdownContainer.style.display = 'none';
+}
 }
 function notificationMessage() {
-  const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
+const notificationMessage = document.querySelector('.notification-Icon-Message-Desktop');
 
-  // Toggle the visibility of the dropdown container
-  if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
-    notificationMessage.style.display = 'block';
-  } else {
-    notificationMessage.style.display = 'none';
-  }
+// Toggle the visibility of the dropdown container
+if (notificationMessage.style.display === 'none' || notificationMessage.style.display === '') {
+  notificationMessage.style.display = 'block';
+} else {
+  notificationMessage.style.display = 'none';
+}
 }
 function notificationMessageMobile() {
-  const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
+const notificationMessageMobile = document.getElementById('notification-Icon-Message-Mobile');
 
-  // Toggle the visibility of the dropdown container
-  if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
-    notificationMessageMobile.style.display = 'block';
-  } else {
-    notificationMessageMobile.style.display = 'none';
-  }
+// Toggle the visibility of the dropdown container
+if (notificationMessageMobile.style.display === 'none' || notificationMessageMobile.style.display === '') {
+  notificationMessageMobile.style.display = 'block';
+} else {
+  notificationMessageMobile.style.display = 'none';
+}
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -216,18 +230,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function highlightItem(index) {
     listItems.forEach((item, i) => {
-      if (i === index) {
-        item.classList.add('selected');
-        item.setAttribute('aria-selected', 'true');
+      const isSelected = i === index;
+      item.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+      item.classList.toggle('selected', isSelected);
+      if (isSelected) {
         item.focus();
+        announceChange(item.textContent);
         if (!isElementInViewport(item)) {
           item.scrollIntoView({ block: 'nearest' });
         }
-      } else {
-        item.classList.remove('selected');
-        item.setAttribute('aria-selected', 'false');
       }
     });
+  }
+
+  function announceChange(message) {
+    const liveRegion = document.getElementById('live-region');
+    liveRegion.textContent = message;
   }
 
   function isElementInViewport(el) {
@@ -249,11 +267,11 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedIndex = selectedIndex <= 0 ? listItems.length - 1 : selectedIndex - 1;
       }
       highlightItem(selectedIndex);
-    } else if (event.key === 'Enter') {
+    } else if (event.key === 'Enter' && selectedIndex > -1) {
       event.preventDefault();
-      if (selectedIndex > -1) {
-        // Perform the action on pressing Enter (e.g., navigate to the selected item's link)
-        console.log(`Selected item: ${listItems[selectedIndex].innerText}`);
+      const anchor = listItems[selectedIndex].querySelector('a');
+      if (anchor) {
+        anchor.click();
       }
     }
   });
@@ -269,12 +287,15 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         selectedIndex = index;
         highlightItem(selectedIndex);
+        const anchor = listItems[selectedIndex].querySelector('a');
+        if (anchor) {
+          anchor.click();
+        }
       }
     });
   });
 });
 
-  
 
 
 
@@ -282,4 +303,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  

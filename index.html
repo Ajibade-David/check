@@ -41,10 +41,10 @@
     
     <button class="navbar-DC-Button-Desktop"  onclick="toggleDropdown()">DC</button>
     
-    <div class="dc-Menu-DropdownContainer" >
+    <div class="dc-Menu-DropdownContainer"  role="region" aria-labelledby="list-heading" aria-describedby="live-region" id="list-container" >
     <div class="dc-Menu-Dc-Text2-Collections">
       <div class="dc-Menu-DropdownContainer-Dc-Text">DC</div>
-      <div class="dc-Menu-DropdownContainer-Dc-Collections">Davii Collections</div>
+      <div class="dc-Menu-DropdownContainer-Dc-Collections" id="list-heading">Davii Collections</div>
       <img src="" alt="" class="dc-Menu-DropdownContainer-Dc-Collections-Mark-Img">
   </div>
   <div class="dc-Menu-DropdownContainer-AllStores-Img-Container">
@@ -52,28 +52,28 @@
     <div class="all-Stores-Text">All Stores</div>
   </div>
   <ul id="list" tabindex="0" aria-label="List of items" role="listbox">
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem" class="help-center">Help Center</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">Change Log</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">Community forums</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">Hire A shopify Partner</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">Keyboard shortcuts</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">David Micheal</a><br>davidmicheal@gmail.com
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" role="menuitem">Manage Account</a>
   </li>
-  <li class="menu-Item"  tabindex="-1" role="option">
+  <li class="menu-Item"  tabindex="-1" role="option" aria-selected="false">
     <a href="" >Log Out</a>
   </li>
 </ul>
@@ -151,9 +151,12 @@
       </div>
       
       <div class="steps-Div" style="display: none;">
+        <ul id="liststeps-Div" role="list">
     <div class="option-Customize-your-Online-Store-Container">
       <div class="option-Customize-your-Online-Store">
-        <img id="option-1" class="option-Customize-your-Online-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <li class="option-Customize-your-Online-Store" tabindex="0" role="listitem2">
+          <img id="option-1" class="option-Customize-your-Online-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="" class="checkbox-image" tabindex="0" >
+        </li>
         <span class="option-Customize-your-Online-Store-Text">Customize your online store</span><br>
       </div>
       <div class="option-Div">
@@ -170,7 +173,9 @@
     </div>
     <div class="option-Add-Your-First-Product-Container">
       <div class="option-Add-Your-First-Product">
-        <img id="option-2"class="option-Add-Your-First-Product-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <li class="option-Customize-your-Online-Store" tabindex="0" role="listitem2">
+          <img id="option-2"class="option-Add-Your-First-Product-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="" tabindex="0" >
+        </li>
         <span class="option-Add-Your-First-Product-Text">Add your first product</span><br>
       </div>
       <div class="option-Div">
@@ -187,9 +192,11 @@
     </div>
     <div class="option-Add-A-Custom-Domain-Container">
       <div class="option-Add-A-Custom-Domain">
-        <img id="option-3" class="option-Add-A-Custom-Domain-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <li class="option-Customize-your-Online-Store" tabindex="0" role="listitem2">
+        <img id="option-3" class="option-Add-A-Custom-Domain-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="" tabindex="0" >
         <span class="option-Add-A-Custom-Domain-Text" id="optionbutton">Add A custom domain</span><br>
       </div>
+    </li>
       <div class="option-Div">
       <div class="option-Your-Custom-Domain">
         <p>Your current domain is 222219.myshopify.com but you can add a custom domain<br>to help customers find your online store.
@@ -203,9 +210,11 @@
       </div>
     <div class="name-Your-Store-Container">
       <div class="name-Your-Store">
-        <img id="option-4"class="name-Your-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <li class="option-Customize-your-Online-Store" tabindex="0" role="listitem2">
+        <img id="option-4"class="name-Your-Store-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="" tabindex="0" >
         <span class="name-Your-Store-Text">Name your store</span><br>
       </div>
+      </li>
       <div class="option-Div">
       <div class="your-Temporary-Store-Name">
         <p>Your temporary store name is currently Davii collections. The store name<br>appears in your admin and your online store.
@@ -219,9 +228,11 @@
       </div>
     <div class="set-Up-Payment-Provider-Container">
       <div class="set-Up-Payment-Provider">
-        <img  id="option-5"class="set-Up-Payment-Provider-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="">
+        <li class="option-Customize-your-Online-Store" tabindex="0" role="listitem2">
+        <img  id="option-5"class="set-Up-Payment-Provider-Icon-Dashed-Circle" src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg" alt="" tabindex="0" >
         <span class="set-Up-Payment-Provider-Text">Set up payment provider</span><br>
       </div>
+      </li>
       <div class="option-Div">
       <div class="choose-Your-Payment-Provider">
         <p>Choose a payment provider to start accepting payments.You’ll need to create<br>with the payment provider and set it up with your Shopify store. <br>
@@ -233,8 +244,8 @@
         </div>
       </div>
       </div>
-
-   
+</li>
+<div id="live-region" class="sr-only" aria-live="polite" style="display: none;"></div>
     
     </div>
     </div>
