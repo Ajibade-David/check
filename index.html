@@ -23,19 +23,21 @@
     </div></a>
 
     <!-- Search box at the center -->
+    
     <div class="search-Box-Desktop" onmouseover="focusInput()">
       <input type="text" class="search-Input-Desktop" placeholder="         Search" oninput="adjustPadding(this)">
       <img class="search-Icon-Desktop" src="https://crushingit.tech/hackathon-assets/icon-search.svg" alt="Search Icon">
+      
     </div>    
-    
+    <div class="notification-Icon-Mobile">
+      <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="" onclick="notificationMessageMobile()">
+    </div>
 
     <!-- Button at the right-hand side -->
     <div class="notification-Icon-Desktop">
       <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="" onclick="notificationMessage()">
     </div>
-    <div class="notification-Icon-Mobile">
-      <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="" onclick="notificationMessageMobile()">
-    </div>
+   
     <button class="navbar-DC-Button-Mobile2"  onclick="toggleDropdown()" style="display: none;">DC</button>
     <button class="navbar-Collections-Button-Desktop" onclick="toggleDropdown()">Davii Collections</button>
     

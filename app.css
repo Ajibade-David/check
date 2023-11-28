@@ -1222,12 +1222,10 @@ animation: none !important;
       overflow-x: hidden;
 
     }
-
-    
     .search-Box-Desktop {
       position: absolute;
-      width: 50%;
-      margin-left:120px;
+      width: 70%;
+      margin-left:50px;
     }
     .search-Input-Desktop {
       width: 50%;
@@ -1248,20 +1246,17 @@ animation: none !important;
       border: 2px solid var(--White, #FFF);
       background: var(--grey-g-200, #303030);
     }
-  
-    .notification-Icon-Desktop {
-      display: flex;
-      padding: 6px;
+    .notification-Icon-Mobile {
+      display: block; 
+      padding: 16px;
       align-items: center;
       gap: 8px;
       border-radius: 8px;
       background: var(--grey-g-200, #303030);
       cursor: pointer;
-      
-      
+      margin-left: 50px;
     }
-    
-  .navbar-Collections-Button-Desktop {
+   .navbar-Collections-Button-Desktop {
     display: none;
   }
   .navbar-DC-Button-Mobile2{
@@ -1280,7 +1275,7 @@ animation: none !important;
     filter: brightness(4960%) contrast(100%);
   }
   .setup-Guide-Container {
-    width: fit-content;
+    width: auto;
     flex-direction: column;
     gap: -2px;
     border-radius: 18px;
@@ -1289,9 +1284,7 @@ animation: none !important;
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 
   }
-  .notification-Icon-Mobile{
-    display: block;
-  }
+ 
   .notification-Icon-Desktop{
     display: none;
   }
