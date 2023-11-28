@@ -52,27 +52,13 @@
   }
 
   .search-Input-Desktop:focus {
-    display: flex;
-    width: 480px;
-    height: 32px;
-    padding: 8px;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-    border-radius: 8px;
+   
     border: 2px solid var(--White, #FFF);
     background: var(--grey-g-200, #303030);
   }
 
   .search-Input-Desktop:active {
-    display: flex;
-    width: 480px;
-    height: 32px;
-    padding: 8px;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-    border-radius: 8px;
+   
     border: 2px solid var(--White, #FFF);
     background: var(--grey-g-200, #303030);
   }
